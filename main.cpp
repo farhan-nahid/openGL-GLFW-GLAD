@@ -1,73 +1,5 @@
-// #include <glad/glad.h>  // GLAD must be included before GLFW
-// #include <GLFW/glfw3.h> // GLFW for window management
-// #include <iostream>
-
-// // GLFW error callback to catch issues
-// void glfwErrorCallback(int error, const char* description) {
-//     std::cerr << "GLFW Error (" << error << "): " << description << std::endl;
-// }
-
-// // Callback function to handle window resize
-// void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-//     glViewport(0, 0, width, height);
-// }
-
-// int main() {
-//     // Set GLFW error callback
-//     glfwSetErrorCallback(glfwErrorCallback);
-
-//     // Initialize GLFW
-//     if (!glfwInit()) {
-//         std::cerr << "Failed to initialize GLFW\n";
-//         return -1;
-//     }
-
-//     // Set OpenGL version (Mac only supports up to 4.1)
-//     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-//     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
-//     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-//     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // Required for macOS
-
-//     // Create a GLFW window
-//     GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Window", nullptr, nullptr);
-//     if (!window) {
-//         std::cerr << "Failed to create GLFW window\n";
-//         glfwTerminate();
-//         return -1;
-//     }
-
-//     glfwMakeContextCurrent(window);
-//     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-
-//     // Load OpenGL function pointers using GLAD
-//     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-//         std::cerr << "Failed to initialize GLAD\n";
-//         return -1;
-//     }
-
-//     // Set the viewport size
-//     glViewport(0, 0, 800, 600);
-
-//     // Main render loop
-//     while (!glfwWindowShouldClose(window)) {
-//         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-//         glClear(GL_COLOR_BUFFER_BIT);
-
-//         // Swap buffers and poll for events
-//         glfwSwapBuffers(window);
-//         glfwPollEvents();
-//     }
-
-//     // Cleanup and exit
-//     glfwDestroyWindow(window);
-//     glfwTerminate();
-//     return 0;
-// }
-
-
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-
+#include <glad/glad.h>  
+#include <GLFW/glfw3.h> 
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -248,3 +180,67 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
 }
+
+
+
+// // GLFW error callback to catch issues
+// void glfwErrorCallback(int error, const char* description) {
+//     std::cerr << "GLFW Error (" << error << "): " << description << std::endl;
+// }
+
+// // Callback function to handle window resize
+// void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
+//     glViewport(0, 0, width, height);
+// }
+
+// int main() {
+//     // Set GLFW error callback
+//     glfwSetErrorCallback(glfwErrorCallback);
+
+//     // Initialize GLFW
+//     if (!glfwInit()) {
+//         std::cerr << "Failed to initialize GLFW\n";
+//         return -1;
+//     }
+
+//     // Set OpenGL version (Mac only supports up to 4.1)
+//     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+//     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+//     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+//     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // Required for macOS
+
+//     // Create a GLFW window
+//     GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Window", nullptr, nullptr);
+//     if (!window) {
+//         std::cerr << "Failed to create GLFW window\n";
+//         glfwTerminate();
+//         return -1;
+//     }
+
+//     glfwMakeContextCurrent(window);
+//     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+//     // Load OpenGL function pointers using GLAD
+//     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+//         std::cerr << "Failed to initialize GLAD\n";
+//         return -1;
+//     }
+
+//     // Set the viewport size
+//     glViewport(0, 0, 800, 600);
+
+//     // Main render loop
+//     while (!glfwWindowShouldClose(window)) {
+//         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+//         glClear(GL_COLOR_BUFFER_BIT);
+
+//         // Swap buffers and poll for events
+//         glfwSwapBuffers(window);
+//         glfwPollEvents();
+//     }
+
+//     // Cleanup and exit
+//     glfwDestroyWindow(window);
+//     glfwTerminate();
+//     return 0;
+// }
