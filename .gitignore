@@ -1,0 +1,31 @@
+# Build and output directories
+/build/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Compiled binary files
+/OpenGLProject
+/OpenGLProject.exe
+/OpenGLProject.pdb
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+
+# Logs and temporary files
+*.log
+*.swp
+*.swo
+*.bak
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# macOS specific files
+.DS_Store
